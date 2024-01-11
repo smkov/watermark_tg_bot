@@ -43,7 +43,8 @@ scheduler.start()
 
 async def marker(file, media_type, chat_id):
     final_file = File(file)
-    watermark = Watermark(File("watermark.png"), pos=Position.bottom_centre)
+    #watermark = Watermark(File("watermark.png"), pos=Position.bottom_centre)
+    watermark = Watermark(File("Logo 1.png"), pos=Position.centre)
     final_media = apply_watermark(final_file, watermark)
     os.remove(file)
     print(final_media)
